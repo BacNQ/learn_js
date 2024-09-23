@@ -650,3 +650,54 @@ function handleDeleteCourse(id) {
             }
         });
 }
+
+// //Destructuring, rest
+// var array = ['Jan', 'Feb', 'Mar', 'Apr'];
+// var [a,...rest] = array;
+// console.log(rest);
+
+//Spread
+// var obj1 = {
+//     name: 'John',
+//     age: 30,
+//     job: 'Developer'
+// }
+
+// var obj2 = {
+//     job: 'Designer',
+//     city: 'New York'
+// }
+
+// var mergedObj = {...obj1,...obj2 };
+// console.log(mergedObj);
+
+//Tagged template literals
+// function highlight([first, ...string], ...values) {
+//     return values.reduce(function (acc, curr){
+//         return [...acc, `<span>${curr}</span>`, string.shift()]
+//     }, [first]).join('');
+// }
+
+// var name1 = 'John';
+// var job = 'Designer';
+
+// const html = highlight`Ten toi la ${name1} dang lam ${job}`;
+// console.log(html);
+
+//Module 
+import logger from './logger.js';
+import { TYPE_LOG, TYPE_WARN, TYPE_ERROR } from './constants.js';
+import * as constants from './constants.js';
+console.log(constants);
+logger('test...', TYPE_ERROR);
+
+//Optional chaining
+const user = {
+    name: 'John',
+    address: {
+        city: 'New York',
+        country: 'USA'
+    }
+};
+
+console.log(user.address?.city); // Optional chaining
